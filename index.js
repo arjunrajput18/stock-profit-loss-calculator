@@ -29,21 +29,30 @@ function calculateHandler() {
   if (!validateInput()) {
     return;
   }
-  const totalInvestment = initialPrice.value * numberOfStocks.value;
-  const currentInvestment = currentPrice.value * numberOfStocks.value;
 
-  if (totalInvestment > currentInvestment) {
-    var loss = totalInvestment - currentInvestment;
-    var lossPercentage = (loss / totalInvestment) * 100;
-    output.innerText = `The loss is of Rs. ${loss.toFixed(2)} and the loss percentage is ${lossPercentage.toFixed(2)}% `;
+  const initialInvestment = initialPrice.value 
+  const currentInvestment = currentPrice.value 
+  const quantity=numberOfStocks.value
+  calculateProfitAndLoss(initialInvestment,currentInvestment,quantity)
+}
 
-  } else if (totalInvestment < currentInvestment) {
-    var profit = totalInvestment + currentInvestment;
-    var profitPercentage = (profit / totalInvestment) * 100;
-    output.innerText=`The profit is of Rs. ${profit.toFixed( 2 )} and the profit percentage is ${profitPercentage.toFixed(2)}% ` ;
-  } else {
-    output.innerText =`Both Profit and loss are equal.`
-  }
+function calculateProfitAndLoss(initialInvestment,currentInvestment,quantity){
+    if (initialInvestment > currentInvestment) {
+        var loss = (initialInvestment + currentInvestment)*quantity;
+        var lossPercentage = (loss / initialInvestment) * 100;
+        output.style.color="red"
+        output.innerText = `The loss is of Rs. ${loss.toFixed(2)} and the loss percentage is ${lossPercentage.toFixed(2)}% `;
+      } 
+      else if (initialInvestment < currentInvestment) {
+        var profit = (currentInvestment - initialInvestment)*quantity;
+        var profitPercentage = (profit / initialInvestment) * 100;
+        output.style.color="green"
+        output.innerText = `The profit is of Rs. ${profit.toFixed(2)} and the profit percentage is ${profitPercentage.toFixed(2)}% `;
+      } 
+      else {
+        output.style.color="blue"
+        output.innerText = `Both Profit and loss are equal.`;
+      }
 }
 
 btnCalculate.addEventListener("click", calculateHandler);
