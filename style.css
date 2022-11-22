@@ -1,0 +1,12 @@
+body{
+    text-align:center;
+
+}
+
+label{
+    display: block;
+    padding-top: 1rem;
+}
+#btn-calculate{
+    margin-top: 1rem;
+}
