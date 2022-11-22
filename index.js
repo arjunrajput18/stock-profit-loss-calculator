@@ -38,7 +38,7 @@ function calculateHandler() {
 
 function calculateProfitAndLoss(initialInvestment,currentInvestment,quantity){
     if (initialInvestment > currentInvestment) {
-        var loss = (initialInvestment + currentInvestment)*quantity;
+        var loss = (initialInvestment - currentInvestment)*quantity;
         var lossPercentage = (loss / initialInvestment) * 100;
         output.style.color="red"
         output.innerText = `The loss is of Rs. ${loss.toFixed(2)} and the loss percentage is ${lossPercentage.toFixed(2)}% `;
