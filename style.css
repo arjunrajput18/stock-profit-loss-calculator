@@ -4,10 +4,9 @@
 }
 body{
     text-align:center;
-    font-family: sans-serif;
-    
-    
+    font-family: Georgia, 'Times New Roman', Times, serif;
 background-image: url(/images/invest6.svg);
+background-repeat: no-repeat;
      font-size: large;
      
 }
@@ -45,6 +44,12 @@ h1{
     margin-bottom: 0.8rem;
    
 }
+input {
+    
+    padding: 0.5rem;
+    margin: 0rem 0.7rem;
+    border-radius: 0.5rem;
+  }
 
 #btn-calculate{
    margin-top:2rem;
