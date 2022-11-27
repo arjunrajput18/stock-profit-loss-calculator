@@ -8,6 +8,7 @@ body{
 background-image: url(/images/invest6.svg);
 background-repeat: no-repeat;
      font-size: large;
+     background-position-x: center;
      
 }
 
@@ -23,7 +24,7 @@ label{
 }
 
 h1{
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 
