@@ -72,5 +72,6 @@ input{
     margin-top: 3rem;
     font-size: larger;
     font-weight: bolder;
+   color: var(--secondary-color);
 
 }

@@ -19,6 +19,7 @@ function validateInput() {
     return false;
   }
   if (numberOfStocks.value <= 0) {
+    
     output.innerText = "The number Of Stocks cannot be zero or negative  ";
     return false;
   }
