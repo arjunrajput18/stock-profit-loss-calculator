@@ -5,12 +5,14 @@
 body{
     text-align:center;
     font-family: Georgia, 'Times New Roman', Times, serif;
-background-image: url(/images/invest6.svg);
-background-repeat: no-repeat;
+    background-image: url(/images/invest6.svg);
      font-size: large;
-     background-position-x: center;
+   
+     background-repeat: no-repeat;
+     background-position: right;
+ }
      
-}
+
 
 
 
